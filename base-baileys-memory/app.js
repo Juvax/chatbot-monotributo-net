@@ -72,7 +72,7 @@ const flowMonot = addKeyword(["1", "1-", "monotributo"]).addAnswer(
 const flowOptInscripto1 = addKeyword(["1", "1-"])
   .addAnswer(
     //"A continuación te enviamos un link para acceder al formulario de inscripción a RI"
-    "A continuación podrás acceder a un link para rellenar un formulario de alta como Responsable Inscripto. Los honorarios correspondientes por dicho tramite son de $50.000 , si necesitas asesoramiento no dudes en consultarnos"
+    "A continuación podrás acceder a un link para rellenar un formulario de alta como Responsable Inscripto. Los honorarios correspondientes por dicho trámite son de $50.000 , si necesitas asesoramiento no dudes en consultarnos"
   )
   .addAnswer("https://monotributo.net/formularios/responsableInscripto.php");
 
@@ -126,7 +126,7 @@ const flowInscripto = addKeyword(["2", "2-", "inscripto"]).addAnswer(
 )
 
 const flowOrigen = addKeyword(["3", "3-", "origen"]).addAnswer(
-  "Perfecto, los honorarios correspondientes por dicho tramite son de $30.000 , te vamos a solicitar por favor un mail de contacto, a la brevedad un profesional se estará contactando",
+  "Perfecto, los honorarios correspondientes por dicho trámite son de $30.000 , te vamos a solicitar por favor un mail de contacto, a la brevedad un profesional se estará contactando",
   { capture: true },
   (ctx, { fallBack }) => {
     if (!ctx.body.includes("@")) {
