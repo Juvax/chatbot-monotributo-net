@@ -179,8 +179,9 @@ const flowAcerca = addKeyword(["7", "7-", "acerca"]).addAnswer([
   "Contamos con profesionales recibidos y matriculados. Que tienen más de 10 años de experiencia en el campo de los impuestos, especializados principalmente en el Régimen del Monotributo. Además, tenemos la información actualizada de AFIP para brindarte el mejor asesoramiento en tiempo y forma. Contá con nuestra experiencia para ayudarte!",
 ])
 
-// Obtiene la hora actual
-const horaActual = new Date().getHours();
+// Obtiene la hora actual (Arg) por si el server está afuera
+const horaActual = new Date().toLocaleString("en-US", { hour: 'numeric', hour12: false, timeZone: "America/Argentina/Buenos_Aires" });
+
 
 const buenas = async () => {
   if (horaActual >= 6 && horaActual < 12) {
