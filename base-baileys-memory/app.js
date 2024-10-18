@@ -180,7 +180,7 @@ const flowAcerca = addKeyword(["7", "7-", "acerca"]).addAnswer([
 ])
 
 // Obtiene la hora actual (Arg) por si el server está afuera
-const horaActual = new Date().toLocaleString("en-US", { hour: 'numeric', hour12: false, timeZone: "America/Argentina/Buenos_Aires" });
+const horaActual = parseInt(new Date().toLocaleString("en-US", { hour: 'numeric', hour12: false, timeZone: "America/Argentina/Buenos_Aires" }));
 
 
 const buenas = async () => {
