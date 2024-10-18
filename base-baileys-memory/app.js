@@ -180,10 +180,19 @@ const flowAcerca = addKeyword(["7", "7-", "acerca"]).addAnswer([
 ])
 
 // Obtiene la hora actual (Arg) por si el server está afuera
-const horaActual = parseInt(new Date().toLocaleString("en-US", { hour: 'numeric', hour12: false, timeZone: "America/Argentina/Buenos_Aires" }));
+//const horaActual = parseInt(new Date().toLocaleString("en-US", { hour: 'numeric', hour12: false, timeZone: "America/Argentina/Buenos_Aires" }));
+
+const obtenerHoraArgentina = () => {
+  let ahora = new Date();
+  let horaUTC = ahora.getUTCHours();
+  let horaArgentina = (horaUTC - 3 + 24) % 24; // Ajustamos por UTC-3
+  return horaArgentina;
+};
 
 
 const buenas = async () => {
+  const horaActual = obtenerHoraArgentina();  // Usamos la función que ajusta la hora correctamente
+  let buenos;
   if (horaActual >= 6 && horaActual < 12) {
     buenos = "¡Buenos días!";
   } else if (horaActual >= 12 && horaActual < 18) {
