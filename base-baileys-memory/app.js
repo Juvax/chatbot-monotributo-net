@@ -202,6 +202,8 @@ const buenas = async () => {
   }
   return buenos;
 }
+
+
 const flowPrincipal = addKeyword(["hola", "buenas", "consulta", "0"])
   .addAnswer("¡Hola!", null, async (ctx, { flowDynamic }) => {
     const data = await buenas();
